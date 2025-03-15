@@ -1,3 +1,5 @@
+"use client"; 
+
 import SomeComponent from "./someComponent";
 
 export default function Home() {
