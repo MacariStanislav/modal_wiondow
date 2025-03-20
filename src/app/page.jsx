@@ -1,11 +1,11 @@
 "use client"; 
 
-import SomeComponent from "./someComponent";
+import SomeComponent from "./Component/someComponent";
 
 export default function Home() {
   return (
-    <div>
+   
       <SomeComponent />
-    </div>
+   
   );
 }
