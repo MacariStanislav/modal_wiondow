@@ -1,5 +1,5 @@
 "use client";
-
+import { useSelector } from "react-redux";
 import React from "react";
 import { Modal } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -12,9 +12,13 @@ import {
   ButtonStyled,
 } from "./helper/ModalStyle";
 
-const ModalComponentWithClose = ({ open, handleClose, title, description }) => {
+const ModalComponentWithClose = ({  handleClose }) => {
+  const { isOpen, title, description } = useSelector(
+    (state) => state.modal
+  );
+
   return (
-    <Modal open={open} onClose={handleClose}>
+    <Modal open={isOpen} onClose={handleClose}>
       <ModalAllBox>
         <ModalTitle>
           {title}
